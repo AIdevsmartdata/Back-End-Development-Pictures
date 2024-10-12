@@ -47,7 +47,7 @@ def get_picture_by_id(id):
     picture = next((pic for pic in data if pic['id'] == id), None)
     if picture:
         return jsonify(picture), 200
-    return jsonify({"error": "Picture not found"}), 404
+    return jsonify({"message": "Picture not found"}), 404
 
 
 ######################################################################
